@@ -43,6 +43,8 @@ import { Page404Component } from './components/dashboard/page404/page404.compone
 import { HistorialClienteComponent } from './components/dashboard/resumen/historial-cliente/historial-cliente.component';
 import { HistorialCourrierComponent } from './components/dashboard/resumen/historial-courrier/historial-courrier.component';
 import { PdfCourrierComponent } from './components/dashboard/resumen/historial-courrier/pdf-courrier/pdf-courrier.component';
+import { GraficosClienteComponent } from './components/dashboard/resumen/graficos-cliente/graficos-cliente.component';
+
 
 
 @NgModule({
@@ -84,6 +86,7 @@ import { PdfCourrierComponent } from './components/dashboard/resumen/historial-c
     HistorialClienteComponent,
     HistorialCourrierComponent,
     PdfCourrierComponent,
+    GraficosClienteComponent,
 
   ],
   imports: [

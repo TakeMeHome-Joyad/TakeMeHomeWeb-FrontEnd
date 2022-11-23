@@ -1,3 +1,4 @@
+import { GraficosClienteComponent } from './components/dashboard/resumen/graficos-cliente/graficos-cliente.component';
 import { HistorialCourrierComponent } from './components/dashboard/resumen/historial-courrier/historial-courrier.component';
 import { HistorialClienteComponent } from './components/dashboard/resumen/historial-cliente/historial-cliente.component';
 import { Page404Component } from './components/dashboard/page404/page404.component';
@@ -33,6 +34,7 @@ import { PresentationComponent } from './components/dashboard/presentation/prese
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {path:'entrypage', component:EntrypageComponent, children:
     [
@@ -50,7 +52,8 @@ const routes: Routes = [
         {path:'sendnopay', component:EntregasNoPagadasComponent},
         {path:'shipmentpay', component:PedidosPagadosComponent},
         {path:'historialpagos', component:HistorialClienteComponent},
-        {path:'historialcobros',component:HistorialCourrierComponent}
+        {path:'historialcobros',component:HistorialCourrierComponent},
+        {path:'graficocliente', component:GraficosClienteComponent}
       ]},
       {path:'perfil', component:ProfileComponent, children:[
         {path:'edicion', component:EdicionDatosComponent},
