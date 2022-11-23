@@ -39,7 +39,28 @@
 }
 .filtro-cont{
     width: 100%;
+    position: relative;
 }
+.icon-excel{
+    width: 30px;
+    height: 30px;
+    margin-left: 0.1rem;
+}
+.btn-excel{
+    background-color:rgba(89, 129, 145, 0.568) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+    top:30%;
+    width: 150px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    border: white 2px solid;
+}
+
 .table-cont{
     width: 100%;
     display: flex;

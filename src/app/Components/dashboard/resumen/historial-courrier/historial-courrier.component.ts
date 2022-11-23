@@ -240,4 +240,22 @@ export class HistorialCourrierComponent implements OnInit {
     const pdf=pdfMake.createPdf(pdfDefinition);
     pdf.open();
   }
+  exportExcel(){
+    this.shipmentService.exportShipments(Number(sessionStorage.getItem('Id_Logged_User'))).subscribe(
+      (data: any) => {
+        let file = new Blob([data],{
+          type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        });
+
+        let fileURL = URL.createObjectURL(file);
+        var anchor = document.createElement('a');
+        anchor.download = 'historial_cobros.xlsx';
+        anchor.href = fileURL;
+        anchor.click();
+
+
+      }
+
+    );
+  }
 }

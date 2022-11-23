@@ -32,8 +32,25 @@
             <button (click)="fakeLoading()" mat-raised-button color="primary" routerLink="/app/resumen/shipment" class="btn-resumen" >Pedidos aceptados</button>
             <button (click)="fakeLoading()" mat-raised-button color="primary" class="btn-resumen" routerLink="/app/resumen/shipmentpay">Pedidos en progreso</button>
             <button (click)="fakeLoading()" mat-raised-button color="primary" class="btn-resumen" routerLink="/app/resumen/historialpagos">Historial de pagos</button>
+
           </div>
         </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title class="title-panel">
+<b style=" font-family: 'Sofia-Pro'; font-weight: bold;">Reportes</b><mat-icon style="margin-left: 0.5rem;"> insert_chart</mat-icon>
+</mat-panel-title>
+<mat-panel-description style=" font-family: 'Sofia-Pro'">
+Despliegue para ver las opciones
+</mat-panel-description>
+</mat-expansion-panel-header>
+<div class="btn-content">
+  <button (click)="fakeLoading()" mat-raised-button color="primary" class="btn-resumen" routerLink="/app/resumen/graficocliente">Grafica de pedidos y viajes</button>
+
+
+</div>
+</mat-expansion-panel>
       </mat-accordion>
     </div>
     <div class="cont-right">

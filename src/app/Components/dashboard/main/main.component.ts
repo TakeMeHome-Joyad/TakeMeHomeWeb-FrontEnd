@@ -8,7 +8,6 @@ import {MatDrawerMode} from '@angular/material/sidenav';
 import { ReactiveFormsModule,FormGroup } from '@angular/forms';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError} from '@angular/router';
 
-
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -21,8 +20,7 @@ export class MainComponent implements OnInit {
   texto="";
   currentRoute: string;
   nameUser!:string;
-  perfilUser!:string;
-  id:number;
+  perfilUser!:string; 
   cerrarMessage=false;
   displayFiltro='none'
   notification=false;
@@ -40,7 +38,7 @@ export class MainComponent implements OnInit {
           this.notificationArray=data;
       }
     ); 
-    this.id=Number(sessionStorage.getItem('Id_Logged_User'))
+    
       this.currentRoute = "Demo";
     this.router.events.subscribe((event: Event) => {
 
@@ -48,7 +46,7 @@ export class MainComponent implements OnInit {
           
             this.currentRoute = event.url;
             if(this.currentRoute=='/app/inicio'){
-              this.userService.getUser(this.id).subscribe(
+              this.userService.getUser(Number(sessionStorage.getItem('Id_Logged_User'))).subscribe(
                 (data:User)=>{
                   this.nameUser=data.name;
                   this.perfilUser=data.urlImage;
@@ -57,7 +55,7 @@ export class MainComponent implements OnInit {
                   this.texto="Bienvenido "+ this.nameUser;
                 }
             )
-              console.log(this.id)
+
               console.log(this.nameUser)
               
             }
